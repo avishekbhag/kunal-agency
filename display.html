@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal Agency - Billing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Billing</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="billing">
+            <h2>Create Invoice</h2>
+            <form id="billing-form">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" required>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" required>
+
+                <label for="gst-number">GST Number:</label>
+                <input type="text" id="gst-number" required>
+
+                <label for="item-name">Item Name:</label>
+                <input type="text" id="item-name">
+
+                <label for="item-quantity">Quantity:</label>
+                <input type="number" id="item-quantity" min="1">
+
+                <label for="item-price">Price:</label>
+                <input type="number" id="item-price" step="0.01" min="0">
+
+                <button type="button" id="add-item">Add Item</button>
+
+                <button type="submit">Generate PDF</button>
+                <div id="items-list">
+                    <!-- Item fields will be added here dynamically -->
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
